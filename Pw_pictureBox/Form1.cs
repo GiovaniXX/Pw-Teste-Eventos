@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.IO;
+using System.Net;
 using System.Windows.Forms;
 
 namespace Pw_pictureBox
@@ -45,6 +46,15 @@ namespace Pw_pictureBox
                     MessageBox.Show("O arquivo de imagem selecionado não existe.");
                 }
             }
+        }
+
+        private void LinkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            // Define a URL que você deseja abrir
+            string url = "https://www.pwdatabase.com/br/";
+
+            // Abre a URL em um navegador da web padrão
+            System.Diagnostics.Process.Start(url);
         }
     }
 }
