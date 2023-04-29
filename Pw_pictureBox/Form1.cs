@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Net;
@@ -51,10 +52,23 @@ namespace Pw_pictureBox
         private void LinkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             // Define a URL que você deseja abrir
-            string url = "https://www.pwdatabase.com/br/";
+            string url = "https://www.pwdatabase.com/";
 
-            // Abre a URL em um navegador da web padrão
-            System.Diagnostics.Process.Start(url);
+            // Cria um objeto ProcessStartInfo para configurar o navegador a ser usado
+            ProcessStartInfo psi = new ProcessStartInfo();
+            psi.FileName = "msedge.exe";
+            psi.Arguments = url;
+
+            // Abre a URL em um navegador da web padrão (Microsoft Edge)
+            Process browserProcess = new Process();
+            browserProcess.StartInfo = psi;
+
+            if (!browserProcess.Start())
+            {
+                // Se não foi possível abrir o navegador, exiba uma mensagem de erro
+                MessageBox.Show("Não foi possível abrir o navegador. Verifique se o Microsoft Edge está instalado em seu computador.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
     }
 }
