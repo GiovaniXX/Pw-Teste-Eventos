@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -11,26 +12,40 @@ namespace Update
 {
     public partial class Form1 : Form
     {
-        private string directoryPath = Path.GetDirectoryName(Application.StartupPath);
+        private readonly string _directoryPath;
 
         public Form1()
         {
             InitializeComponent();
-            comboBox_dbSource.Text = "item_ext_desc.txt";
+            // Obtém o diretório do aplicativo
+            _directoryPath = Path.GetDirectoryName(Application.StartupPath);
+            comboBox_dbSource.Text = _directoryPath;
+          
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // Crie uma lista de opções para o comboBox_dbSource
-            List<string> dbSourceOptions = new List<string>();
-            dbSourceOptions.Add("item_ext_desc.txt");
-            dbSourceOptions.Add("pwdatabase.com/pwi");
-            dbSourceOptions.Add("pwdatabase.com/my");
-            dbSourceOptions.Add("pwdatabase.com/ms");
-            dbSourceOptions.Add("pwdatabase.com/ru");
+            // Define as opções do comboBox_dbSource
+            comboBox_dbSource.DataSource = new List<string>
+            {
+                 "item_ext_desc.txt",
+                 "pwdatabase.com/pwi",
+                 "pwdatabase.com/my",
+                 "pwdatabase.com/ms",
+                 "pwdatabase.com/ru"
+            };
 
-            // Defina as opções do comboBox_dbSource com a lista criada acima
-            comboBox_dbSource.DataSource = dbSourceOptions;
+            // Define o valor padrão do comboBox_dbSource
+            comboBox_dbSource.SelectedItem = "item_ext_desc.txt";
+        }
+
+        private void ComboBox_dbSource_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Obtém a opção selecionada pelo usuário
+            string selectedOption = comboBox_dbSource.SelectedItem.ToString();
+
+            // Define a opção selecionada no comboBox
+            comboBox_dbSource.Text = selectedOption;
         }
     }
 }
