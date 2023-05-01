@@ -90,11 +90,6 @@ namespace Pw_pictureBox
             linha2.Text = new string('_', linha2.Width);
             linha2.Location = new Point(6, 350);
             groupBox1.Controls.Add(linha2);
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            CriarLinha();
-        }
+        }       
     }
 }
