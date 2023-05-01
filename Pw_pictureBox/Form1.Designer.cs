@@ -176,7 +176,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Pw_pictureBox.Properties.Resources.Visual_Studio;
-            this.pictureBox1.Location = new System.Drawing.Point(9, 353);
+            this.pictureBox1.Location = new System.Drawing.Point(9, 357);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(32, 32);
             this.pictureBox1.TabIndex = 9;
@@ -185,7 +185,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 388);
+            this.label7.Location = new System.Drawing.Point(6, 392);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(95, 13);
             this.label7.TabIndex = 10;

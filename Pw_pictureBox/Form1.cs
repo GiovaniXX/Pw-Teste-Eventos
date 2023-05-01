@@ -15,6 +15,7 @@ namespace Pw_pictureBox
         {
             InitializeComponent();
             LoadComboBoxItems();
+            CriarLinha();
         }
 
         private void LoadComboBoxItems()
@@ -70,5 +71,30 @@ namespace Pw_pictureBox
             }
         }
 
+        private void CriarLinha()
+        {
+            Label linha = new Label();
+            linha.AutoSize = false;
+            linha.Width = groupBox1.Width - 10;
+            linha.Height = 1;
+            linha.BorderStyle = BorderStyle.Fixed3D;
+            linha.Text = new string('_', linha.Width);
+            linha.Location = new Point(5, 415);
+            groupBox1.Controls.Add(linha);
+
+            Label linha2 = new Label();
+            linha2.AutoSize = false;
+            linha2.Width = groupBox1.Width - 10;
+            linha2.Height = 1;
+            linha2.BorderStyle = BorderStyle.Fixed3D;
+            linha2.Text = new string('_', linha2.Width);
+            linha2.Location = new Point(6, 350);
+            groupBox1.Controls.Add(linha2);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            CriarLinha();
+        }
     }
 }
