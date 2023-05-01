@@ -130,7 +130,7 @@ O método Load_Surface() é chamado quando o evento SelectedIndexChanged do Comb
 
 Em seguida, o método File.Exists é usado para verificar se o arquivo de imagem existe no caminho especificado. Se o arquivo existir, o método Image.FromFile é usado para carregar a imagem no objeto Image, e então a imagem é definida como a imagem do PictureBox usando a propriedade pictureBox_surface.Image. Caso contrário, uma caixa de mensagem é exibida informando que o arquivo de imagem selecionado não existe.
 
-Em resumo, esse código é responsável por carregar os arquivos de imagem de um diretório em um ComboBox e exibir a imagem selecionada em um PictureBox quando um item é selecionado no ComboBox.</value>
+</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

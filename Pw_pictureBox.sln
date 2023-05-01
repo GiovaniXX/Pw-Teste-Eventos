@@ -5,6 +5,8 @@ VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pw_pictureBox", "Pw_pictureBox\Pw_pictureBox.csproj", "{1240CCAB-5158-4168-A60F-9F1D5B425EE9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Update", "Update\Update.csproj", "{4247E696-CAB7-4C06-86B0-92600DDBC51C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{1240CCAB-5158-4168-A60F-9F1D5B425EE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1240CCAB-5158-4168-A60F-9F1D5B425EE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1240CCAB-5158-4168-A60F-9F1D5B425EE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4247E696-CAB7-4C06-86B0-92600DDBC51C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4247E696-CAB7-4C06-86B0-92600DDBC51C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4247E696-CAB7-4C06-86B0-92600DDBC51C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4247E696-CAB7-4C06-86B0-92600DDBC51C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
