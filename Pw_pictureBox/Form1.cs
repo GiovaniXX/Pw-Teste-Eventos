@@ -9,7 +9,7 @@ namespace Pw_pictureBox
 {
     public partial class Form1 : Form
     {
-        private string directoryPath = @"E:\PROJETOS DEV-GIOVANI\PROJETOS VISUAL STUDIO 2022\C#\Pw_pictureBox\Pw_pictureBox\bin\Debug\surfaces\百宝阁\";
+        private string directoryPath = "E:\\Projetos Dev Giovani\\PROJETOS VISUAL STUDIO 2022\\C#\\Pw_pictureBox\\Pw_pictureBox\\bin\\Debug\\surfaces\\百宝阁";
 
         public Form1()
         {
