@@ -22,6 +22,7 @@ namespace Pw_pictureBox
         {
             // Adiciona os arquivos do diretório no ComboBox
             string[] files = Directory.GetFiles(directoryPath);
+
             foreach (string file in files)
             {
                 comboBox_surface.Items.Add(Path.GetFileNameWithoutExtension(file));

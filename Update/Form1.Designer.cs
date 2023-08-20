@@ -38,11 +38,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox_dbSource = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.numericUpDown_itemID = new System.Windows.Forms.NumericUpDown();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_itemID)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.numericUpDown_itemID);
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.textBox_name);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.button_autoDetect);
@@ -120,9 +125,7 @@
             this.comboBox_dbSource.Location = new System.Drawing.Point(81, 67);
             this.comboBox_dbSource.Name = "comboBox_dbSource";
             this.comboBox_dbSource.Size = new System.Drawing.Size(133, 21);
-            this.comboBox_dbSource.TabIndex = 1;
-            this.comboBox_dbSource.SelectedIndexChanged += new System.EventHandler(this.ComboBox_dbSource_SelectedIndexChanged);
-            this.comboBox_dbSource.TextChanged += new System.EventHandler(this.Form1_Load);
+            this.comboBox_dbSource.TabIndex = 1;           
             // 
             // label1
             // 
@@ -132,6 +135,27 @@
             this.label1.Size = new System.Drawing.Size(48, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Update.:";
+            // 
+            // numericUpDown_itemID
+            // 
+            this.numericUpDown_itemID.Location = new System.Drawing.Point(81, 42);
+            this.numericUpDown_itemID.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDown_itemID.Name = "numericUpDown_itemID";
+            this.numericUpDown_itemID.Size = new System.Drawing.Size(65, 20);
+            this.numericUpDown_itemID.TabIndex = 17;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 46);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(44, 13);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Item ID:";
             // 
             // Form1
             // 
@@ -146,6 +170,7 @@
             this.Text = "Update";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_itemID)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -161,6 +186,8 @@
         private System.Windows.Forms.TextBox textBox_description;
         private System.Windows.Forms.TextBox textBox_name;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.NumericUpDown numericUpDown_itemID;
+        private System.Windows.Forms.Label label5;
     }
 }
 
