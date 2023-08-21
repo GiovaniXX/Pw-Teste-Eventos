@@ -1,0 +1,6 @@
+//  Element item extend descriptions.
+
+#_index
+#_begin
+
+10037  "^ffcb4aThis ancient yet amazing invention has\rdelighted both young and old for centuries.\r^00ffffRight click to use."

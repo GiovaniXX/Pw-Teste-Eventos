@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.numericUpDown_itemID = new System.Windows.Forms.NumericUpDown();
+            this.label5 = new System.Windows.Forms.Label();
             this.textBox_name = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.button_autoDetect = new System.Windows.Forms.Button();
@@ -38,8 +40,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox_dbSource = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.numericUpDown_itemID = new System.Windows.Forms.NumericUpDown();
-            this.label5 = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_itemID)).BeginInit();
             this.SuspendLayout();
@@ -62,6 +63,27 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ITEM";
+            // 
+            // numericUpDown_itemID
+            // 
+            this.numericUpDown_itemID.Location = new System.Drawing.Point(81, 42);
+            this.numericUpDown_itemID.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDown_itemID.Name = "numericUpDown_itemID";
+            this.numericUpDown_itemID.Size = new System.Drawing.Size(65, 20);
+            this.numericUpDown_itemID.TabIndex = 17;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 46);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(44, 13);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Item ID:";
             // 
             // textBox_name
             // 
@@ -122,10 +144,18 @@
             // comboBox_dbSource
             // 
             this.comboBox_dbSource.FormattingEnabled = true;
+            this.comboBox_dbSource.Items.AddRange(new object[] {
+            "item_ext_desc.txt",
+            "pwdatabase.com/br",
+            "pwdatabase.com/pwi",
+            "pwdatabase.com/my",
+            "pwdatabase.com/ms",
+            "pwdatabase.com/ru"});
             this.comboBox_dbSource.Location = new System.Drawing.Point(81, 67);
             this.comboBox_dbSource.Name = "comboBox_dbSource";
             this.comboBox_dbSource.Size = new System.Drawing.Size(133, 21);
-            this.comboBox_dbSource.TabIndex = 1;           
+            this.comboBox_dbSource.TabIndex = 1;
+            this.comboBox_dbSource.SelectedIndexChanged += new System.EventHandler(this.button_autoDetect_Click);
             // 
             // label1
             // 
@@ -136,32 +166,20 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Update.:";
             // 
-            // numericUpDown_itemID
+            // richTextBox1
             // 
-            this.numericUpDown_itemID.Location = new System.Drawing.Point(81, 42);
-            this.numericUpDown_itemID.Maximum = new decimal(new int[] {
-            99999,
-            0,
-            0,
-            0});
-            this.numericUpDown_itemID.Name = "numericUpDown_itemID";
-            this.numericUpDown_itemID.Size = new System.Drawing.Size(65, 20);
-            this.numericUpDown_itemID.TabIndex = 17;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 46);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 13);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "Item ID:";
+            this.richTextBox1.Location = new System.Drawing.Point(12, 27);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(345, 565);
+            this.richTextBox1.TabIndex = 1;
+            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(792, 594);
+            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(800, 625);
@@ -188,6 +206,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.NumericUpDown numericUpDown_itemID;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }
 

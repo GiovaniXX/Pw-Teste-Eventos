@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 
@@ -14,23 +15,12 @@ namespace Update
     public partial class Form1 : Form
     {
         private SortedList itemDescriptions;
-        private string directoryPath = "E:\\Projetos Dev Giovani\\PROJETOS VISUAL STUDIO 2022\\C#\\Pw_pictureBox\\Update\\item_ext_desc.txt";
+        private string directoryPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "item_ext_descc.txt");
+
 
         public Form1()
         {
             InitializeComponent();
-            LoadComboBoxItems();
-        }
-
-        private void LoadComboBoxItems()
-        {
-            // Adiciona os arquivos do diretório no ComboBox           
-            string[] files = Directory.GetFiles(directoryPath);
-
-            foreach (string file in files)
-            {
-                comboBox_dbSource.Items.Add(Path.GetFileNameWithoutExtension(file));
-            }
         }
 
         private void button_autoDetect_Click(object sender, EventArgs e)
@@ -115,10 +105,13 @@ namespace Update
                             }
                         }
                     }
+
+                    Cursor = Cursors.Default;
                 }
                 catch (Exception)
                 {
                     MessageBox.Show("Connection Failed!");
+                    Cursor = Cursors.Default;
                 }
             }
         }
