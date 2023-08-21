@@ -164,7 +164,7 @@ Se a opção selecionada for maior ou igual a 1, o código tenta obter informaç
 
 O código analisa o conteúdo da resposta HTML para extrair informações, como o nome do item e a descrição. Ele faz isso procurando por elementos HTML específicos nas páginas web.
 
-A descrição é extraída da resposta HTML, e em seguida, é feito um processamento semelhante ao feito no primeiro cenário para remover elementos HTML, substituir caracteres especiais, como cores representadas em códigos hexadecimais, e substituir quebras de linha por caracteres especiais \\r.
+A descrição é extraída da resposta HTML, e em seguida, é feito um processamento semelhante ao feito no primeiro cenário para remover elementos HTML, substituir caracteres especiais, como cores representadas em códigos hexadecimais, e substituir quebras de linha por caracteres especiais (\\r).
 
 A descrição processada é então definida como o texto da caixa de texto textBox_description.
 
