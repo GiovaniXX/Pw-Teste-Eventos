@@ -15,7 +15,7 @@ namespace Update
     public partial class Form1 : Form
     {
         private SortedList itemDescriptions;
-        private string directoryPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "item_ext_descc.txt");
+        private string directoryPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "item_ext_desc.txt");
 
 
         public Form1()
@@ -34,6 +34,10 @@ namespace Update
                 {
                     description = description.Replace("\\r", " \\r");
                     textBox_description.Text = description;
+                }
+                else
+                {
+                    MessageBox.Show("ID not found in database.");
                 }
             }
             else
@@ -105,7 +109,6 @@ namespace Update
                             }
                         }
                     }
-
                     Cursor = Cursors.Default;
                 }
                 catch (Exception)
