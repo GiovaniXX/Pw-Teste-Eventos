@@ -1,6 +1,6 @@
-# 🛠️ Projeto Update - Documentação Completa
+# 🛠️ Projeto Update
 
-Este projeto **Update** é uma aplicação poderosa e personalizada para gerenciar atualizações em uma base de dados específica, oferecendo uma interface intuitiva e funcional. Abaixo, detalhamos cada componente do projeto para um entendimento completo.
+Este projeto **Update** é uma aplicação que permite gerenciar atualizações em uma base de dados específica, oferecendo uma interface intuitiva e funcional. Abaixo, detalhamos cada componente do projeto para um entendimento completo.
 
 ---
 
