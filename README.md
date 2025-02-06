@@ -1,6 +1,6 @@
 # 🛠️ Projeto Update
 
-Este projeto **Update** é uma aplicação que permite gerenciar atualizações em uma base de dados específica, oferecendo uma interface intuitiva e funcional. Abaixo, detalhamos cada componente do projeto para um entendimento completo.
+Este projeto **Update** é uma aplicação que permite gerenciar atualizações em uma base de dados específica, (Perfect World Database) oferecendo uma interface intuitiva e funcional. Abaixo, detalhamos cada componente do projeto para um entendimento completo.
 
 ---
 
@@ -9,7 +9,7 @@ Este projeto **Update** é uma aplicação que permite gerenciar atualizações 
 - **Descrição**: Um campo numérico controlado pelo componente `NumericUpDown` que permite inserir o ID do item para busca em uma base de dados.
 - **Funcionalidade**: Define o item específico que será atualizado ou consultado na base de dados selecionada.
 - **Uso**: Insira o ID desejado antes de realizar qualquer operação para garantir que as informações correspondam ao item correto.
-- **IDs**: Provém de uma base de dados...Perfect World Database
+- **IDs**: Provém de uma base de dados.
 
 ---
 
