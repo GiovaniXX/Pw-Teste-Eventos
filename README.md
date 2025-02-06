@@ -75,7 +75,7 @@ Este projeto **Update** é uma aplicação que permite gerenciar atualizações 
 
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/seuusuario/Pw-Teste-Eventos.git
+   git clone https://github.com/GiovaniXX/Pw-Teste-Eventos.git
    ```
 2. Abra o projeto no Visual Studio 2022.
 3. Compile a solução e execute o projeto.
