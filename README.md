@@ -1,77 +1,108 @@
-Update Project
+# 🛠️ Projeto Update - Documentação Completa
 
-Este projeto foi criado para facilitar a manipulação de dados em um ambiente intuitivo e eficiente, permitindo interações com uma base de dados, Perfect World Database de forma dinâmica e prática. Abaixo, você encontrará uma descrição detalhada dos componentes e funcionalidades principais.
+Este projeto **Update** é uma aplicação poderosa e personalizada para gerenciar atualizações em uma base de dados específica, oferecendo uma interface intuitiva e funcional. Abaixo, detalhamos cada componente do projeto para um entendimento completo.
 
-Componentes Principais
+---
 
-1. NumericUpDown: Item ID
+## 🔢 **Item ID**
 
-Este controle permite ao usuário definir o ID do item que será manipulado. O valor inserido aqui será usado para buscar os dados correspondentes na base de dados.
+- **Descrição**: Um campo numérico controlado pelo componente `NumericUpDown` que permite inserir o ID do item na base de dados.
+- **Funcionalidade**: Define o item específico que será atualizado ou consultado na base de dados selecionada.
+- **Uso**: Insira o ID desejado antes de realizar qualquer operação para garantir que as informações correspondam ao item correto.
 
-2. ComboBox: Update Base de Dados
+---
 
-O comboBox_update é utilizado para selecionar a base de dados onde as requisições HTTP serão realizadas. Ele lista todas as opções disponíveis, permitindo que o usuário escolha a base específica para a operação.
+## 📋 **ComboBox\_Update**
 
-3. Botão: Detect
+- **Descrição**: Um `ComboBox` que permite selecionar a base de dados onde as requisições HTTP serão realizadas.
+- **Funcionalidade**:
+  - Exibe uma lista de bases de dados disponíveis para interação.
+  - As ações subsequentes serão aplicadas à base de dados escolhida.
+- **Uso**: Certifique-se de selecionar a base antes de continuar com o processo de atualização ou consulta.
 
-O botão Detect realiza a ação de buscar e carregar os dados relacionados ao ID especificado no campo NumericUpDown. Uma vez pressionado, ele atualiza os campos correspondentes com os dados recuperados.
+---
 
-4. Campo: Name
+## 🕵️ **Botão Detect**
 
-Este campo exibe o nome do item, que é automaticamente carregado com base no ID fornecido no NumericUpDown e nas informações da base de dados selecionada.
+- **Descrição**: Um botão que busca automaticamente informações do item com base no `Item ID` fornecido.
+- **Funcionalidade**:
+  - Faz uma requisição à base de dados selecionada para localizar e exibir os detalhes do item.
+  - Atualiza automaticamente os campos **Name** e **Description**.
+- **Uso**: Após inserir o `Item ID`, clique no botão para detectar os dados do item.
 
-5. Campo: Description
+---
 
-Neste campo, é exibida a descrição detalhada do item selecionado. Assim como o Name, ele é automaticamente preenchido após a operação de detecção.
+## 🏷️ **Campo Name**
 
-6. ComboBox: Language
+- **Descrição**: Um campo de texto que exibe o nome do item conforme o `Item ID`.
+- **Funcionalidade**:
+  - Preenchido automaticamente após o uso do botão **Detect**.
+  - Pode ser editado manualmente, se necessário.
+- **Uso**: Verifique o nome exibido e, caso necessário, ajuste-o manualmente.
 
-Este comboBox permite selecionar o idioma em que as informações do funcionamento do programa serão apresentadas. Por padrão, ele é inicializado com a opção: "Escolha o idioma aqui".
+---
 
-Fluxo de Funcionamento
+## 📝 **Campo Description**
 
-Selecionar o ID do item
+- **Descrição**: Um campo de texto que apresenta a descrição detalhada do item.
+- **Funcionalidade**:
+  - Atualizado automaticamente com base no `Item ID` e na base de dados selecionada.
+  - Permite edições manuais para ajustes ou correções.
+- **Uso**: Analise a descrição apresentada e ajuste-a, se necessário.
 
-Utilize o NumericUpDown para definir o ID do item.
+---
 
-Escolher a Base de Dados
+## 🌐 **ComboBox\_Language**
 
-Selecione a base de dados no comboBox_update.
+- **Descrição**: Um `ComboBox` que permite ao usuário selecionar o idioma da interface e das respostas da aplicação.
+- **Funcionalidade**:
+  - Exibe uma lista de idiomas disponíveis para seleção.
+  - Inicializa com a opção padrão: **Escolha o idioma aqui**.
+- **Uso**: Antes de começar, selecione o idioma desejado para personalizar sua experiência.
 
-Detectar Dados
+---
 
-Clique no botão Detect para buscar os dados.
+## 🖥️ **Requisitos do Sistema**
 
-Visualizar Informações
+- **Linguagem de Programação**: C#
+- **Framework**: .NET Framework 4.8 ou superior
+- **IDE Recomendada**: Visual Studio 2022
 
-Verifique o nome no campo Name e a descrição no campo Description.
+---
 
-Configurar Idioma
+## 🚀 **Como Executar o Projeto**
 
-Use o comboBox_Language para selecionar o idioma desejado.
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/seuusuario/Pw-Teste-Eventos.git
+   ```
+2. Abra o projeto no Visual Studio 2022.
+3. Compile a solução e execute o projeto.
 
-Requisitos do Sistema
+---
 
-Linguagem: C#
+## 📂 **Estrutura do Projeto**
 
-Framework: .NET
+- `MainForm.cs`: Contém a lógica principal da interface.
+- `UpdateService.cs`: Gerencia as requisições HTTP e atualizações na base de dados.
+- `LanguageManager.cs`: Lida com a seleção e aplicação de idiomas.
 
-IDE: Visual Studio
+---
 
-Dependências:
+## 🛡️ **Licença**
 
-Sistema operacional Windows
+Este projeto é licenciado sob a [MIT License](LICENSE).
 
-Contribuição
+---
 
-Contribuições são sempre bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request para melhorias ou correções.
+### 👥 **Contribuidores**
 
-Licença
+- **Nome do Desenvolvedor**: Giovani Chaves
+- **Contato**: giovani\_chaves\@hotmail.com
 
-Este projeto está sob a licença MIT. Consulte o arquivo LICENSE para mais detalhes.
+---
 
-Aproveite o projeto e torne suas atualizações de dados mais eficientes!
+> **Nota**: Sinta-se à vontade para personalizar e expandir este projeto de acordo com suas necessidades. Caso encontre algum problema, abra uma *issue* no repositório!
 
-\*\*Desenvolvido por: Giovani Chaves\
- Data: 06/02/2025
+
 
