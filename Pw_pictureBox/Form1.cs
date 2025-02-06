@@ -9,7 +9,7 @@ namespace Pw_pictureBox
 {
     public partial class Form1 : Form
     {
-        private string directoryPath = "E:\\Projetos Dev Giovani\\PROJETOS VISUAL STUDIO 2022\\C#\\Pw_pictureBox\\Pw_pictureBox\\bin\\Debug\\surfaces\\百宝阁";
+        private string directoryPath = "E:\\Projetos Csharp\\Pw-Teste-Eventos\\Pw_pictureBox\\surfaces\\百宝阁";
 
         public Form1()
         {
@@ -91,6 +91,6 @@ namespace Pw_pictureBox
             linha2.Text = new string('_', linha2.Width);
             linha2.Location = new Point(6, 350);
             groupBox1.Controls.Add(linha2);
-        }       
+        }
     }
 }
