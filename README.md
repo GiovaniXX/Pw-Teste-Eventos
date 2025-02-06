@@ -1,102 +1,76 @@
-# ComboBox Language Selector
+Update Project
 
-## 📋 Sobre o Projeto
+Este projeto foi criado para facilitar a manipulação de dados em um ambiente intuitivo e eficiente, permitindo interações com uma base de dados, Perfect World Database de forma dinâmica e prática. Abaixo, você encontrará uma descrição detalhada dos componentes e funcionalidades principais.
 
-O **ComboBox Language Selector** é uma aplicação desenvolvida em C# com Windows Forms, que tem como objetivo permitir que os usuários selecionem um idioma a partir de uma lista pré-definida. O projeto foi recentemente atualizado para incluir uma funcionalidade que define uma opção padrão no `ComboBox` com o texto **"Escolha o idioma aqui"**, garantindo uma experiência mais intuitiva para os usuários.
+Componentes Principais
 
-## 🚀 Funcionalidades
+1. NumericUpDown: Item ID
 
-- Exibe uma lista de idiomas disponíveis no `ComboBox`.
-- Inclui uma opção padrão intitulada **"Escolha o idioma aqui"**.
-- Garante que o idioma padrão seja exibido ao abrir o aplicativo.
-- Detecta mudanças no idioma selecionado com o evento `SelectedIndexChanged`.
+Este controle permite ao usuário definir o ID do item que será manipulado. O valor inserido aqui será usado para buscar os dados correspondentes na base de dados.
 
-## 🛠️ Tecnologias Utilizadas
+2. ComboBox: Update Base de Dados
 
-- **C#**: Linguagem de programação principal.
-- **Windows Forms**: Framework para criação de interfaces gráficas.
+O comboBox_update é utilizado para selecionar a base de dados onde as requisições HTTP serão realizadas. Ele lista todas as opções disponíveis, permitindo que o usuário escolha a base específica para a operação.
 
-## 📂 Estrutura do Projeto
+3. Botão: Detect
 
-```
-ComboBoxLanguageSelector/
-├── Properties/        # Configurações do projeto
-├── bin/               # Arquivos binários gerados
-├── obj/               # Arquivos temporários de compilação
-├── Form1.cs           # Código principal da interface
-├── Form1.Designer.cs  # Designer gerado automaticamente
-├── Program.cs         # Ponto de entrada da aplicação
-└── README.md          # Documentação do projeto
-```
+O botão Detect realiza a ação de buscar e carregar os dados relacionados ao ID especificado no campo NumericUpDown. Uma vez pressionado, ele atualiza os campos correspondentes com os dados recuperados.
 
-## 🔧 Como Executar o Projeto
+4. Campo: Name
 
-1. Clone este repositório para sua máquina local:
+Este campo exibe o nome do item, que é automaticamente carregado com base no ID fornecido no NumericUpDown e nas informações da base de dados selecionada.
 
-   ```bash
-   git clone https://github.com/seu-usuario/Pw-Teste-Eventos.git
-   ```
+5. Campo: Description
 
-2. Abra o projeto no Visual Studio.
+Neste campo, é exibida a descrição detalhada do item selecionado. Assim como o Name, ele é automaticamente preenchido após a operação de detecção.
 
-3. Compile o projeto pressionando `Ctrl + Shift + B` ou clique em **Build Solution** no menu **Build**.
+6. ComboBox: Language
 
-4. Execute o projeto pressionando `F5` ou clicando em **Start**.
+Este comboBox permite selecionar o idioma em que as informações do funcionamento do programa serão apresentadas. Por padrão, ele é inicializado com a opção: "Escolha o idioma aqui".
 
-5. A interface será exibida com o `ComboBox` configurado para exibir a mensagem padrão **"Escolha o idioma aqui"**.
+Fluxo de Funcionamento
 
-## ✨ Demonstração
+Selecionar o ID do item
 
-**Tela inicial do projeto:**
+Utilize o NumericUpDown para definir o ID do item.
 
-- O `ComboBox` mostra por padrão:
+Escolher a Base de Dados
 
-  ```
-  Escolha o idioma aqui
-  ```
+Selecione a base de dados no comboBox_update.
 
-- Opções disponíveis no `ComboBox`:
+Detectar Dados
 
-  - English
-  - Russian
-  - Traditional Chinese
+Clique no botão Detect para buscar os dados.
 
-## 📌 Exemplo de Código
+Visualizar Informações
 
-Aqui está um trecho do código que adiciona a funcionalidade de seleção padrão:
+Verifique o nome no campo Name e a descrição no campo Description.
 
-```csharp
-public Form1()
-{
-    InitializeComponent();
+Configurar Idioma
 
-    // Adiciona as linguagens no comboBox_Language
-    comboBox_Language.Items.Add("Escolha o idioma aqui"); // Opção padrão
-    comboBox_Language.Items.Add("English");
-    comboBox_Language.Items.Add("Russian");
-    comboBox_Language.Items.Add("Traditional Chinese");
+Use o comboBox_Language para selecionar o idioma desejado.
 
-    // Define o item padrão selecionado
-    comboBox_Language.SelectedIndex = 0;
+Requisitos do Sistema
 
-    // Define o evento de alteração de seleção
-    comboBox_Language.SelectedIndexChanged += ComboBox_Language_SelectedIndexChanged;
-}
-```
+Linguagem: C#
 
-## 📚 Próximos Passos
+Framework: .NET
 
--
+IDE: Visual Studio
 
-## 🤝 Contribuições
+Dependências:
 
-Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request no repositório.
+Sistema operacional Windows
 
-## 📝 Licença
+Contribuição
 
-Este projeto está sob a licença MIT. Para mais detalhes, leia o arquivo `LICENSE`.
+Contribuições são sempre bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request para melhorias ou correções.
 
----
+Licença
+
+Este projeto está sob a licença MIT. Consulte o arquivo LICENSE para mais detalhes.
+
+Aproveite o projeto e torne suas atualizações de dados mais eficientes!
 
 \*\*Desenvolvido por: Giovani Chaves\
  Data: 06/02/2025
